@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { UsersService } from '../users.service';
+import {Component, Input} from '@angular/core';
+import {UsersService} from '../users.service';
 
 @Component({
   selector: 'app-inactive-users',
@@ -9,7 +9,8 @@ import { UsersService } from '../users.service';
 export class InactiveUsersComponent {
   @Input() users: string[];
 
-  constructor(private usersService: UsersService) {}
+  constructor(private usersService: UsersService) {
+  }
 
   onSetToActive(id: number) {
     this.usersService.userSetToActive.emit(id);

@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
   actionNumber: number;
 
   constructor(private usersService: UsersService,
-              private counterService: CounterService) {}
+              private counterService: CounterService) {
+  }
 
   ngOnInit() {
     this.activeUsers = this.usersService.activeUsers;
